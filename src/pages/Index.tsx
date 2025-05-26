@@ -6,12 +6,20 @@ import { Input } from "@/components/ui/input";
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-900 via-gray-900 to-black text-white">
-      {/* Header */}
-      <header className="py-6 px-6 relative z-10">
-        <div className="container mx-auto flex justify-between items-center">
+      {/* Header with Background Image */}
+      <header 
+        className="py-6 px-6 relative z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container mx-auto flex justify-between items-center relative z-10">
           <div className="text-2xl font-bold tracking-wider">PEERU</div>
           <nav className="hidden md:block">
-            <ul className="flex space-x-8 text-sm">
+            <ul className="flex items-center space-x-8 text-sm">
               <li><a href="#" className="hover:text-purple-300 transition-colors">Articles</a></li>
               <li><a href="#" className="hover:text-purple-300 transition-colors">Essays</a></li>
               <li><a href="#" className="hover:text-purple-300 transition-colors">Translations</a></li>
@@ -28,8 +36,18 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section with Abstract Background */}
-      <section className="py-20 px-6 relative overflow-hidden">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="py-20 px-6 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
         {/* Abstract Background Elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/30 via-transparent to-pink-600/30"></div>
@@ -57,8 +75,8 @@ const Index = () => {
           </div>
           
           {/* Popular Tags */}
-          <div className="flex justify-center space-x-4 mb-12">
-            <span className="text-sm text-gray-300 mr-2">Popular Tags:</span>
+          <div className="flex justify-center items-center space-x-4 mb-12">
+            <span className="text-sm text-gray-300">Popular Tags:</span>
             <span className="inline-block bg-gray-700/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-600/50 cursor-pointer transition-colors">
               Design
             </span>
@@ -77,14 +95,22 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
             <div className="flex flex-col md:flex-row">
-              {/* Image */}
-              <div className="w-full md:w-1/2 relative overflow-hidden">
+              {/* Image with small background pattern */}
+              <div 
+                className="w-full md:w-1/2 relative overflow-hidden bg-cover bg-center"
+                style={{
+                  backgroundImage: `url('/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="absolute inset-0 bg-black/30"></div>
                 <img 
                   src="/lovable-uploads/3abdfaf7-0d95-4904-a73a-0b0672a238b6.png" 
                   alt="Ancient temple architecture" 
-                  className="w-full h-64 md:h-full object-cover hover:scale-110 transition-transform duration-700"
+                  className="w-full h-64 md:h-full object-cover hover:scale-110 transition-transform duration-700 relative z-10"
                 />
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 z-20">
                   <span className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                     Featured
                   </span>
