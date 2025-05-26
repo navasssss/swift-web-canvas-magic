@@ -1,26 +1,297 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>swift-web-canvas-magic</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEERU - Our Newsroom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.460.0/lucide.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
 
-    <meta property="og:title" content="swift-web-canvas-magic" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<body class="min-h-screen bg-white text-gray-900">
+    <!-- Header with Background Image -->
+    <header class="py-6 px-6 relative z-10 bg-cover bg-center bg-no-repeat" 
+            style="background-image: url('./public/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png'); background-size: cover; background-position: center top;">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto flex justify-between items-center relative z-10">
+            <div class="text-2xl font-bold tracking-wider text-white">PEERU</div>
+            <nav class="hidden md:block">
+                <ul class="flex items-center space-x-8 text-sm text-white">
+                    <li><a href="#" class="hover:text-purple-300 transition-colors">Articles</a></li>
+                    <li><a href="#" class="hover:text-purple-300 transition-colors">Essays</a></li>
+                    <li><a href="#" class="hover:text-purple-300 transition-colors">Translations</a></li>
+                    <li><a href="#" class="hover:text-purple-300 transition-colors">Discussions</a></li>
+                    <li><a href="#" class="hover:text-purple-300 transition-colors">Series</a></li>
+                    <li><a href="#" class="hover:text-purple-300 transition-colors">Book Reviews</a></li>
+                    <li>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm transition-colors">
+                            Print Edition
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Hero Section with Background Image -->
+    <section class="py-20 px-6 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+             style="background-image: url('./public/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png'); background-size: cover; background-position: center;">
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-black/50"></div>
+        
+        <!-- Abstract Background Elements -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/30 via-transparent to-pink-600/30"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold mb-8 text-center bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+                Our Newsroom
+            </h1>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" placeholder="Search articles..." 
+                           class="w-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-gray-300 px-6 py-4 rounded-lg focus:bg-white/15 focus:border-purple-400 transition-all">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition-colors">
+                        <i data-lucide="search" class="w-4 h-4 text-white"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Popular Tags -->
+            <div class="flex justify-center items-center space-x-4 mb-12">
+                <span class="text-sm text-gray-300">Popular Tags:</span>
+                <span class="inline-block bg-gray-700/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-600/50 cursor-pointer transition-colors text-white">
+                    Design
+                </span>
+                <span class="inline-block bg-gray-700/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-600/50 cursor-pointer transition-colors text-white">
+                    User Experience
+                </span>
+                <span class="inline-block bg-gray-700/50 backdrop-blur-sm rounded-full px-4 py-2 text-sm font-medium hover:bg-gray-600/50 cursor-pointer transition-colors text-white">
+                    User Interfaces
+                </span>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Featured Article -->
+    <section class="py-16 px-6 relative">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 relative">
+                <!-- Background Image covering half -->
+                <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+                     style="background-image: url('./public/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png'); background-size: cover; background-position: center;">
+                </div>
+                <div class="flex flex-col md:flex-row relative z-10">
+                    <!-- Image with small background pattern -->
+                    <div class="w-full md:w-1/2 relative overflow-hidden bg-cover bg-center"
+                         style="background-image: url('./public/lovable-uploads/b18b904c-6729-4ef7-8588-0072adeca3ad.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/30"></div>
+                        <img src="./public/lovable-uploads/3abdfaf7-0d95-4904-a73a-0b0672a238b6.png" 
+                             alt="Ancient temple architecture" 
+                             class="w-full h-64 md:h-full object-cover hover:scale-110 transition-transform duration-700 relative z-10">
+                        <div class="absolute top-4 left-4 z-20">
+                            <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                                Featured
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="w-full md:w-1/2 p-8 bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4 leading-tight text-gray-800">
+                            Cheap Airline Tickets: Great Ways To Save
+                        </h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            In this digital generation where information can be easily obtained within seconds, business cards still have retained their importance in the...
+                        </p>
+                        
+                        <!-- Author Info -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                     alt="Author" 
+                                     class="w-12 h-12 rounded-full mr-4 border-2 border-gray-200">
+                                <div>
+                                    <p class="font-semibold text-gray-800">Viola Manisa</p>
+                                    <p class="text-sm text-gray-500">Verified writer</p>
+                                </div>
+                            </div>
+                            <span class="text-sm text-gray-500 font-medium">02 May</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Articles -->
+    <section class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Popular Articles</h2>
+                <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md transition-colors">
+                    View all
+                </button>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Family protection" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">
+                                How to prevent and protect your family from Carbon monoxide
+                            </h3>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Author" 
+                                     class="w-8 h-8 rounded-full mr-3">
+                                <div class="text-white text-sm">
+                                    <span class="font-medium">Emily Johnson</span>
+                                    <span class="mx-2">•</span>
+                                    <span>15 Jan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+                             alt="Motherhood" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">
+                                Motherhood is the hardest and the best job ever
+                            </h3>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Author" 
+                                     class="w-8 h-8 rounded-full mr-3">
+                                <div class="text-white text-sm">
+                                    <span class="font-medium">Sarah Wilson</span>
+                                    <span class="mx-2">•</span>
+                                    <span>12 Jan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Recent Articles</h2>
+                <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-md transition-colors">
+                    View all
+                </button>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Article 1 - Future of Work -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+                             alt="Future of Work" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-600/80 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-white text-lg font-bold mb-2">Future of Work</h3>
+                            <p class="text-white/90 text-sm mb-3">
+                                Majority of Peeps will work in jobs that don't exist today.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Author" 
+                                     class="w-6 h-6 rounded-full mr-2">
+                                <div class="text-white text-xs">
+                                    <span class="font-medium">John Smith</span>
+                                    <span class="mx-1">•</span>
+                                    <span>8 Jan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 - Future of Data -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" 
+                             alt="Future of Data" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-white text-lg font-bold mb-2">Future of Data</h3>
+                            <p class="text-white/90 text-sm mb-3">
+                                Majority of Peeps will work in jobs that don't exist today.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Author" 
+                                     class="w-6 h-6 rounded-full mr-2">
+                                <div class="text-white text-xs">
+                                    <span class="font-medium">Mike Johnson</span>
+                                    <span class="mx-1">•</span>
+                                    <span>6 Jan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 - Future of Learning -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" 
+                             alt="Future of Learning" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-600/80 to-transparent flex flex-col justify-end p-6">
+                            <h3 class="text-white text-lg font-bold mb-2">Future of Learning</h3>
+                            <p class="text-white/90 text-sm mb-3">
+                                Majority of Peeps will work in jobs that don't exist today.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                                     alt="Author" 
+                                     class="w-6 h-6 rounded-full mr-2">
+                                <div class="text-white text-xs">
+                                    <span class="font-medium">Lisa Chen</span>
+                                    <span class="mx-1">•</span>
+                                    <span>4 Jan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 bg-gray-100 border-t border-gray-200">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600">&copy; 2024 PEERU. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
 </html>
