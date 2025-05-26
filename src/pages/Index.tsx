@@ -1,4 +1,3 @@
-
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -149,6 +148,177 @@ const Index = () => {
                     </div>
                   </div>
                   <span className="text-sm text-gray-500 font-medium">02 May</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Articles */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">Popular Articles</h2>
+            <Button variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50">
+              View all
+            </Button>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Article 1 */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                  alt="Family protection" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+                  <h3 className="text-white text-xl font-bold mb-2">
+                    How to prevent and protect your family from Carbon monoxide
+                  </h3>
+                  <div className="flex items-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                      alt="Author" 
+                      className="w-8 h-8 rounded-full mr-3"
+                    />
+                    <div className="text-white text-sm">
+                      <span className="font-medium">Emily Johnson</span>
+                      <span className="mx-2">•</span>
+                      <span>15 Jan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Article 2 */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+                  alt="Motherhood" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
+                  <h3 className="text-white text-xl font-bold mb-2">
+                    Motherhood is the hardest and the best job ever
+                  </h3>
+                  <div className="flex items-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                      alt="Author" 
+                      className="w-8 h-8 rounded-full mr-3"
+                    />
+                    <div className="text-white text-sm">
+                      <span className="font-medium">Sarah Wilson</span>
+                      <span className="mx-2">•</span>
+                      <span>12 Jan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Articles */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">Recent Articles</h2>
+            <Button variant="outline" className="text-blue-600 border-blue-600 hover:bg-blue-50">
+              View all
+            </Button>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Article 1 - Future of Work */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+                  alt="Future of Work" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-white text-lg font-bold mb-2">Future of Work</h3>
+                  <p className="text-white/90 text-sm mb-3">
+                    Majority of Peeps will work in jobs that don't exist today.
+                  </p>
+                  <div className="flex items-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                      alt="Author" 
+                      className="w-6 h-6 rounded-full mr-2"
+                    />
+                    <div className="text-white text-xs">
+                      <span className="font-medium">John Smith</span>
+                      <span className="mx-1">•</span>
+                      <span>8 Jan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Article 2 - Future of Data */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" 
+                  alt="Future of Data" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-white text-lg font-bold mb-2">Future of Data</h3>
+                  <p className="text-white/90 text-sm mb-3">
+                    Majority of Peeps will work in jobs that don't exist today.
+                  </p>
+                  <div className="flex items-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                      alt="Author" 
+                      className="w-6 h-6 rounded-full mr-2"
+                    />
+                    <div className="text-white text-xs">
+                      <span className="font-medium">Mike Johnson</span>
+                      <span className="mx-1">•</span>
+                      <span>6 Jan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Article 3 - Future of Learning */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" 
+                  alt="Future of Learning" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-600/80 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-white text-lg font-bold mb-2">Future of Learning</h3>
+                  <p className="text-white/90 text-sm mb-3">
+                    Majority of Peeps will work in jobs that don't exist today.
+                  </p>
+                  <div className="flex items-center">
+                    <img 
+                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                      alt="Author" 
+                      className="w-6 h-6 rounded-full mr-2"
+                    />
+                    <div className="text-white text-xs">
+                      <span className="font-medium">Lisa Chen</span>
+                      <span className="mx-1">•</span>
+                      <span>4 Jan</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
