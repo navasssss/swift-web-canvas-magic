@@ -596,10 +596,133 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-6 bg-gray-100 border-t border-gray-200">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-600">&copy; 2024 PEERU. All rights reserved.</p>
+      {/* Newsletter and Footer Section */}
+      <footer 
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/de3bd6b7-3769-4c81-a24b-02a57a9b2641.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        {/* Newsletter Section */}
+        <div className="py-20 px-6 relative">
+          <div className="container mx-auto max-w-6xl">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+              {/* Left side - Newsletter signup */}
+              <div className="lg:w-1/2 text-white">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Get our stories delivered From us to your inbox weekly.
+                </h2>
+                <div className="flex flex-col sm:flex-row gap-4 mb-4 max-w-md">
+                  <Input 
+                    type="email" 
+                    placeholder="Your Email" 
+                    className="bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-md px-4 py-3"
+                  />
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md whitespace-nowrap">
+                    Get started
+                  </Button>
+                </div>
+                <p className="text-blue-200 text-sm">
+                  Get a response tomorrow if you submit by 9pm today. If we received after 9pm will get a response the following day.
+                </p>
+              </div>
+
+              {/* Right side - Newsletter card */}
+              <div className="lg:w-1/2 max-w-md">
+                <div className="bg-white rounded-2xl p-6 shadow-xl">
+                  <div className="mb-4">
+                    <img 
+                      src="/lovable-uploads/de3bd6b7-3769-4c81-a24b-02a57a9b2641.png" 
+                      alt="Newsletter feature" 
+                      className="w-full h-32 object-cover rounded-lg"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    The best articles every week
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Our insurance plans offers are priced the same everywhere else.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Links Section */}
+        <div className="py-16 px-6 relative">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-white">
+              {/* Brand Column */}
+              <div className="col-span-2 md:col-span-1">
+                <h3 className="text-2xl font-bold mb-4">PEERU</h3>
+                <p className="text-blue-200 text-sm mb-6">
+                  Build a modern and creative website with crealand
+                </p>
+                <div className="flex space-x-4">
+                  <a href="#" className="text-blue-200 hover:text-white transition-colors">Twitter</a>
+                  <a href="#" className="text-blue-200 hover:text-white transition-colors">LinkedIn</a>
+                  <a href="#" className="text-blue-200 hover:text-white transition-colors">Instagram</a>
+                  <a href="#" className="text-blue-200 hover:text-white transition-colors">Google</a>
+                  <a href="#" className="text-blue-200 hover:text-white transition-colors">Youtube</a>
+                </div>
+              </div>
+
+              {/* Product Column */}
+              <div>
+                <h4 className="font-semibold mb-4 text-blue-200">Product</h4>
+                <ul className="space-y-3 text-sm">
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Landingpage</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Features</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Documentation</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Referral Program</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Pricing</a></li>
+                </ul>
+              </div>
+
+              {/* Services Column */}
+              <div>
+                <h4 className="font-semibold mb-4 text-blue-200">Services</h4>
+                <ul className="space-y-3 text-sm">
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Documentation</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Design</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Themes</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Illustrations</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">UI Kit</a></li>
+                </ul>
+              </div>
+
+              {/* Company Column */}
+              <div>
+                <h4 className="font-semibold mb-4 text-blue-200">Company</h4>
+                <ul className="space-y-3 text-sm">
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">About</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Terms</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Privacy Policy</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Careers</a></li>
+                </ul>
+              </div>
+
+              {/* More Column */}
+              <div>
+                <h4 className="font-semibold mb-4 text-blue-200">More</h4>
+                <ul className="space-y-3 text-sm">
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Documentation</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">License</a></li>
+                  <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Changelog</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="py-6 px-6 border-t border-blue-400/20">
+          <div className="container mx-auto text-center">
+            <p className="text-blue-200 text-sm">Copyright © 2025. Asn Designs.</p>
+          </div>
         </div>
       </footer>
     </div>
